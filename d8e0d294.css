@@ -549,11 +549,11 @@ a.text-danger:hover {
 }
 .bg-primary {
   color: #fff;
-  background-color: #ff0060;
+  background-color: black
 }
 a.bg-primary:focus,
 a.bg-primary:hover {
-  background-color: #cc004d;
+  background-color: black
 }
 .bg-success {
   background-color: #87e329;
@@ -1724,7 +1724,7 @@ table th[class*="col-"] {
 .table > thead > tr.danger > th,
 .table > thead > tr > td.danger,
 .table > thead > tr > th.danger {
-  background-color: #ff2c74;
+  background-color: black
 }
 .table-hover > tbody > tr.danger:hover > td,
 .table-hover > tbody > tr.danger:hover > th,
@@ -4737,9 +4737,9 @@ button.close {
   }
 }
 body {
-  background-image: -webkit-linear-gradient(top, #ff0060, #ff6975);
-  background-image: -o-linear-gradient(top, #ff0060 0, #ff6975 100%);
-  background-image: linear-gradient(180deg, #ff0060 0, #ff6975);
+  background-image: -webkit-linear-gradient(top, #ffffff, #3b3333);
+  background-image: -o-linear-gradient(top, #331520 0, #270f11 100%);
+  background-image: linear-gradient(180deg, #3d252e 0, #000000);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#FFFF0060",endColorstr="#FFFF6975",GradientType=0);
 }
@@ -4784,7 +4784,7 @@ body.white {
   left: 0;
   right: 0;
   bottom: 30%;
-  box-shadow: inset 0 -40px 60px 10px #ff0060;
+  box-shadow: inset 0 -40px 60px 10px #68595e;
 }
 .card {
   border-radius: 0.25rem;
@@ -4835,8 +4835,8 @@ body.white {
 .btn-primary,
 .btn-primary:hover {
   background-image: -webkit-linear-gradient(left, #ff6975, #ff0060);
-  background-image: -o-linear-gradient(left, #ff6975 0, #ff0060 100%);
-  background-image: linear-gradient(90deg, #ff6975 0, #ff0060);
+  background-image: -o-linear-gradient(left, #111111 0, #504449 100%);
+  background-image: linear-gradient(90deg, #271d1d 0, #ff0060);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#FFFF6975",endColorstr="#FFFF0060",GradientType=1);
 }
@@ -4876,9 +4876,9 @@ body.white {
 }
 .btn-danger,
 .btn-danger:hover {
-  background-image: -webkit-linear-gradient(left, #d9534f, #b52b27);
+  background-image: -webkit-linear-gradient(left, #81110e, #b52b27);
   background-image: -o-linear-gradient(left, #d9534f 0, #b52b27 100%);
-  background-image: linear-gradient(90deg, #d9534f 0, #b52b27);
+  background-image: linear-gradient(90deg, #994946 0, #b52b27);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#FFD9534F",endColorstr="#FFB52B27",GradientType=1);
 }
@@ -4916,7 +4916,7 @@ h5 small {
   transition: all 0.2s linear;
 }
 .social-round-icon:hover {
-  background-color: #ff0060;
+  background-color: rgb(77, 72, 74) 27, 28);
   color: #fff;
   border-color: #ff0060;
 }
