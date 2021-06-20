@@ -277,7 +277,7 @@ textarea {
   line-height: inherit;
 }
 a {
-  color: #ff0060;
+  color: salmon
   text-decoration: none;
 }
 a:focus,
@@ -445,6 +445,7 @@ h1 {
 .h2,
 h2 {
   font-size: 27px;
+  text-align: center;
 }
 .h3,
 .h4,
@@ -2513,11 +2514,11 @@ fieldset[disabled] .btn-default:hover {
 fieldset[disabled] .btn-primary.focus,
 fieldset[disabled] .btn-primary:focus,
 fieldset[disabled] .btn-primary:hover {
-  background-color: salmon
+  background-color: #ff0060;
   border-color: #ff0060;
 }
 .btn-primary .badge {
-  color: sandybrown
+  color: #ff0060;
   background-color: #fff;
 }
 .btn-success {
@@ -4958,7 +4959,7 @@ h5 small {
 }
 .social-buttons a:hover .social-round-icon {
   background-color: #ff0060;
-  color: #fff;
+  color: gray
   border-color: #ff0060;
 }
 .carousel-caption {
