@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Expanding Cards</title>
+    <style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Muli', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  background-color: aqua;
+}
+
+.container {
+  display: flex;
+  width: 90vw;
+}
+
+.panel {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  border-radius: 50px;
+  color: #fff;
+  cursor: pointer;
+  flex: 0.5;
+  margin: 10px;
+  position: relative;
+  -webkit-transition: all 700ms ease-in;
+}
+
+.panel h3 {
+  font-size: 24px;
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  margin: 0;
+  opacity: 0;
+}
+
+.panel.active {
+  flex: 5;
+}
+
+.panel.active h3 {
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 100vw;
+  }
+
+  .panel:nth-of-type(4),
+  .panel:nth-of-type(5) {
+    display: none;
+  }
+}
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="panel active" style="background-image: url('../assets/images1/9AF95A5E-E2C5-4759-A8D9-638FA6E6FD74_1_105_c.jpeg')">
+        <h3>Hills-Clear Sky</h3>
+      </div>
+      <div class="panel" style="background-image: url('../assets/images1/C706C6F7-054E-4EC6-96F7-39B36ADE0F5A.jpeg')">
+        <h3>With my friends</h3>
+      </div>
+      <div class="panel" style="background-image: url('../assets/images1/93D4E534-3E74-4702-AD5F-72C3E5486723_1_105_c.jpeg')">
+        <h3>Car</h3>
+      </div>
+      <div class="panel" style="background-image: url('../assets/images1/img-01.jpeg')">
+        <h3>My Face</h3>
+      </div>
+      <div class="panel" style="background-image: url('../assets/images1/D36C0F05-6590-47DE-802D-6A870BDC2A7F_1_105_c.jpeg')">
+        <h3>Boba Pic </h3>
+      </div>
+
+    </div>
+
+    <script>
+        const panels = document.querySelectorAll('.panel')
+
+        panels.forEach(panel => {
+        panel.addEventListener('click', () => {
+        removeActiveClasses()
+        panel.classList.add('active')
+                })
+            })
+
+        function removeActiveClasses() {
+              panels.forEach(panel => {
+        panel.classList.remove('active')
+    })
+}
+    </script>
+  </body>
+</html>
