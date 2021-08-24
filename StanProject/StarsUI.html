@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+    />
+    <style>
+        body {
+            background-color:bisque
+        }
+        .container {
+            text-align:center;
+        }
+        .star {
+            color:white;
+            font-size: 60px;
+            display: inline-block;
+            -webkit-text-stroke-width: 3px;
+            -webkit-text-stroke-color: black;
+        }
+    </style>
+    <title>Stars UI</title>
+</head>
+<body>
+    <div class ="container">
+        <h1>Stars UI</h1>
+        <i class="star fas fa-star"></i>
+        <i class="star fas fa-star"></i>
+        <i class="star fas fa-star"></i>
+        <i class="star fas fa-star"></i>
+        <i class="star fas fa-star"></i>
+        <h2 class="rating">You are rating 0 stars!</h2>
+    </div>
+</body>
+<script>
+    const container = document.querySelector('.container');
+    const stars = document.querySelectorAll('.star');
+    const rating = document.querySelector('.rating');
+    let clicked = false;
+
+    const redColors = (index, i=0) => {
+        if (i > index) return
+        stars[i].style.color = 'red';
+        return redColors(index, i + 1)
+    }
+
+    const whiteColors = (index, i = stars.length - 1) => {
+        if (i === index) return
+        stars[i].style.color = 'white';
+        return whiteColors(index,i - 1)
+    }
+
+    stars.forEach((e, i) => {
+        e.addEventListener('mouseover',() => {
+            if(clicked) return
+            rating.innerHTML = `You are rating ${i + 1} stars!`
+            console.log(i, 'index')
+            redColors(i)
+            whiteColors(i)
+        })
+
+        e.addEventListener('mouseout', () => {
+            e.style.color = 'red'
+            clicked = false;
+        });
+
+        e.addEventListener('click', () => {
+            rating.innerHTML = `You have given ${i + 1} stars!`;
+            e.style.color = 'red';
+            clicked = true;
+        })
+    })
+</script>
+</html>
