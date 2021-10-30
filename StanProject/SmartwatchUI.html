@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #container {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 655px;
+            height: 800px;
+            background: url('./images/watch.jpg');
+        }
+        #innerContainer {
+      position: relative;
+      margin: 208px auto auto 132px;
+      width: 377px;
+      height: 377px;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+
+    #content {
+      position: absolute;
+      top: 60%;
+      margin: auto;
+      background-color: lightblue;
+      text-align: center;
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+      transition: top 0.5s linear;
+    }
+
+    #content.full {
+      top: 0;
+    }
+
+    h1 {
+      font-size: 5em;
+      margin-top: 30px;
+    }
+
+    iframe {
+      margin-top: -120px;
+      margin-left: -120px;
+    }
+    </style>
+    <title>Smart Watch UI</title>
+
+</head>
+<body>
+    <div id="container">
+        <div id="innercontainer">
+            <div id="container">
+                <div id="innerContainer">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3172.3701999658815!2d-122.01374768469505!3d37.33374347984217!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb59127ce078f%3A0x18e1c3ce7becf1b!2sApple%20Park!5e0!3m2!1sen!2sus!4v1628645997431!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                  <div id="content">
+                    <h1><span id="hour">00</span>:<span id="minute">00</span></h1>
+                    <hr>
+                    <h2 id="weekday"> Wednesday </h2>
+                    <h2> <span id="month"></span> <span id="date"></span>, <span id="year"></span> </h2>
+                  </div>
+                </div>
+              </div>
+        </div>
+    </div>
+    <script>
+        content.onclick = () => {
+      content.className = content.className.includes('full') ? '' : 'full';
+    }
+    const d = new Date();
+    hour.innerText = d.getHours() % 12;
+    const minutes = d.getMinutes() + '';
+    minute.innerText = minutes.length < 2 ? `0${minutes}` : minutes;
+    weekday.innerText = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"][d.getDay()];
+    month.innerText = ["January", "February", "March", "April", "May", "June",
+      "July", "August", "September", "October", "November", "December"][d.getMonth()];
+    date.innerText = d.getDate();
+    year.innerText = d.getFullYear();
+    </script>
+</body>
+</html>
